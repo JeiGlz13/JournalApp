@@ -25,11 +25,12 @@ export const startRegisterWithEmailPasswordName = (email, password, name)=>{
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(async ({user}) =>{
             await user.updateProfile({
-                displayName: name,
-
+                displayName: name
             });
-            console.log(user);
-           dispatch(login(user.uid, user.displayName))
+           dispatch(login(user.uid, user.displayName));
+           user.sendEmailVerification();
+           firebase.auth().signOut();
+           Swal.fire('Hola usuario', 'Hemos enviado un correo de verificacion', 'success');
         }).catch(e=>{
             console.log(e);
         })

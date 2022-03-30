@@ -46,14 +46,15 @@ export const NoteScreen = () => {
 
                 {   (note.url)
                 &&(<div className = "notes__img">
-                        <img src={note.url} alt="ocaso" />
+                        <img src={note.url} alt="note" />
                     </div>)
                 }
             </div>
 
             <button
-            className = "btn btn-danger"
+            className = "btn-danger"
             onClick = {handleDelete}>
+                <i className="fa-regular fa-trash-can"></i>
                 Delete
             </button>
         </div>

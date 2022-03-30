@@ -14,6 +14,7 @@ import { useState } from 'react';
 import {PrivateRoute} from './PrivateRoute';
 import {PublicRoute} from './PublicRoute';
 import { startLoadingNotes } from '../actions/notes';
+import { JournalLoading } from '../components/journal/JournalLoading';
 
 export const AppRouter = () => {
     const dispatch = useDispatch();
@@ -35,10 +36,8 @@ export const AppRouter = () => {
         });
     }, [dispatch, setChecking]);
 
-    if(checking){
-        return(
-            <h1>Please Wait...</h1>
-        )
+    if (checking) {
+        return <JournalLoading/>;
     }
 
     return (

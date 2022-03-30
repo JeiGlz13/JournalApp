@@ -12,10 +12,10 @@ export const RegisterScreen = () => {
     const {msgError} = useSelector(state => state.ui);
 
     const [formValues, handleInputChange] = useForm({
-            name: 'Jeisson',
-            email: 'jeiglz@gmail.com',
-            password: '123456',
-            password2: '123456'
+            name: '',
+            email: '',
+            password: '',
+            password2: ''
         });
 
         const {name, email, password, password2} = formValues;
@@ -46,13 +46,14 @@ export const RegisterScreen = () => {
         <div>
             <h3 className = "auth__title">Register</h3>
 
-            <form onSubmit = {handleRegister} className = "animate__animated animate__fadeIn animate-faster">
-            {   msgError &&
-                <div className= "auth__alert-error">
-                    {msgError}
-                </div>}
+            <form onSubmit = {handleRegister} className = "animate__animated animate__fadeIn animate-faster auth__form">
+                {   msgError &&
+                    <div className= "auth__alert-error">
+                        {msgError}
+                    </div>
+                }
 
-            <input className = "auth__input" type = "text" placeholder = "Name" name = "name" value = {name} onChange = {handleInputChange} autoComplete="off" />
+                <input className = "auth__input" type = "text" placeholder = "Name" name = "name" value = {name} onChange = {handleInputChange} autoComplete="off" />
                 <input className = "auth__input" type = "text" placeholder = "Email" name = "email" value = {email} onChange = {handleInputChange} autoComplete="off" />
                 <input className = "auth__input" type = "password" placeholder = "Password" name = "password" value = {password} onChange = {handleInputChange} />
                 <input className = "auth__input" type = "password" placeholder = "Confirm Password" name = "password2" value = {password2} onChange = {handleInputChange} />

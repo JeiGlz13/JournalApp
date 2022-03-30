@@ -4,12 +4,12 @@ export const NothingSelected = () => {
     return (
         <div className = "nothing__mainContent">
             <p>
-                Select something
+                Select or create
                 <br/>
-                or crete an Entry
+                a new Entry
             </p>
 
-            <i className = "far fa-star fa-4x marginTop-2" ></i>
+            <i className="fa-solid fa-hand-pointer fa-4x"></i>
         </div>
     )
 }

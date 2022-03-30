@@ -19,6 +19,8 @@
 .auth__title{
     color: darken($color: $primario, $amount: 10);
     margin-bottom: 2vw;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 .auth__input{
@@ -38,10 +40,19 @@
 .auth__social-networks{
     align-items: center;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     padding: 2vw 0;
     width: 100%;
+
+    p{
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    a{
+        margin-top: 0.75rem;
+    }
 }
 
 .auth__alert-error{
@@ -52,4 +63,115 @@
     justify-content: center;
     margin-bottom: 2vw;
     padding: 1vw;
+}
+
+@media only screen and (max-width: 950px) {
+    .auth__box-container{
+        border-radius: 2vw;
+        padding: 5vw;
+        width: 60vw;
+
+        .auth__form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .auth__input{
+            font-size: 2vw;
+            margin-bottom: 1.5vw;
+            height: 5vw;
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width: 650px) {
+    .auth__box-container{
+        border-radius: 2vw;
+        padding: 5vw;
+        width: 80vw;
+
+        .auth__form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .auth__input{
+            font-size: 3vw;
+            margin-bottom: 1.5vw;
+            height: 7.5vw;
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width: 450px) {
+    .auth__box-container{
+        border-radius: 4vw;
+        padding: 4vw;
+        width: 90vw;
+
+        .auth__input{
+            font-size: 4vw;
+            margin-bottom: 1.5vw;
+            height: 10vw;
+            width: 95%;
+        }
+    }
+
+    .auth__social-networks{
+        padding: 2vw 0;
+        width: 100%;
+    
+        p{
+            margin-top: 1vw;
+            margin-bottom: 0.5rem;
+        }
+    
+        a{
+            margin-top: 0.75rem;
+        }
+    }
+}
+@media only screen and (max-width: 450px) {
+    .auth__box-container{
+        border-radius: 4vw;
+        padding: 4vw;
+        width: 90vw;
+
+        .auth__input{
+            font-size: 4.5vw;
+            margin-bottom: 1.5vw;
+            height: 11vw;
+            width: 95%;
+        }
+    }
+
+    .auth__title{
+        margin-bottom: 2vw;
+        font-size: 1.2rem;
+    }
+
+    .auth__social-networks{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2vw 0;
+        width: 100%;
+    
+        p{
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+    
+        .google-btn{
+            p{
+                font-size: 0.8rem;
+            }
+        }
+    }
 }

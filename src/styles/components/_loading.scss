@@ -1,0 +1,32 @@
+.loading__screen{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 16rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+        color: $grisOscuro;
+        font-weight: 800;
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .loading__screen{
+        img{
+            width: 12rem;
+        }
+    
+        h1{
+            font-size: 2rem;
+        }
+    }
+}

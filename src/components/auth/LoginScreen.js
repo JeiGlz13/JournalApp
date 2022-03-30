@@ -11,8 +11,8 @@ export const LoginScreen = () => {
     const {loading} = useSelector(state => state.ui);
 
     const [formValues, handleInputChange] = useForm({
-        email: 'jeiglz@gmail.com',
-        password: '123456'
+        email: '',
+        password: ''
     });
 
     const {email, password} = formValues;
@@ -29,7 +29,7 @@ export const LoginScreen = () => {
         <div>
             <h3 className = "auth__title">Login</h3>
 
-            <form onSubmit = {handleLogin} className = "animate__animated animate__fadeIn animate-faster">
+            <form onSubmit = {handleLogin} className = "animate__animated animate__fadeIn animate-faster auth__form">
                 <input className = "auth__input" type = "text" placeholder = "Email" name = "email" autoComplete="off" value = {email} onChange = {handleInputChange} />
                 <input className = "auth__input" type = "password" placeholder = "Password" name = "password" value = {password} onChange = {handleInputChange}  />
 

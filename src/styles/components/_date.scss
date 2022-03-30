@@ -1,0 +1,58 @@
+.date-container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    margin-left: 0.6rem;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    width: 5.8rem;
+
+    .date-month{
+        font-size: 0.9rem;
+        font-weight: bold;
+        background-color: rgb(220 38 38);
+        color: white;
+    }
+
+    .date-day{
+        padding-top: 0.1rem;
+        color: $grisOscuro;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        margin: -0.2rem 0;
+    }
+
+    .date-year{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 0 0.4rem;
+        justify-content: space-between;
+        color: $grisOscuro;
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .date-container{
+        border-radius: 0.4rem;
+        margin-left: 0.4rem;
+        width: 5rem;
+    
+        .date-month{
+            font-size: 0.7rem;
+        }
+    
+        .date-day{
+            padding-top: 0.1rem;
+            font-size: 1.1rem;
+            margin: -0.2rem 0;
+        }
+    
+        .date-year{
+            padding: 0 0.35rem;
+            font-size: 0.65rem;
+        }
+    }
+}
